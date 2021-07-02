@@ -265,17 +265,12 @@ foreach ($comments as $value) {
 		barrageArray.forEach(function(item, index) {
 			createBarrage(item, false);
 		});
-
-		//点击发送
-		sendBtn.onclick = sendMsg; //点击发送
-
-		//回车
-		inputBox.onkeydown = function(e) {
-			e = e || window.event;
-			if (e.keyCode == 13) {
-				send();
-			}
-		}
+		
+		setInterval(() => {
+			barrageArray.forEach(function(item, index) {
+				createBarrage(item, false);
+			});
+		}, 20000)
 
 	})()
 </script>
